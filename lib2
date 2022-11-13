@@ -62,8 +62,8 @@ local library = {
     open = false;
     opening = false;
     hasInit = false;
-    Title = startupArgs.Title or 'Anti';
-    Game = startupArgs.Game or 'universal';
+    Title = startupArgs.Title or '';
+    Game = startupArgs.Game or '';
     FileType = startupArgs.FileType or '.txt';
     Domain = startupArgs.Domain or '';
 }
