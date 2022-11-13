@@ -2248,7 +2248,7 @@ function library:init()
                 function section:AddToggle(data)
                     local toggle = {
                         class = 'toggle';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
@@ -2396,7 +2396,7 @@ function library:init()
                     function toggle:AddColor(data)
                         local color = {
                             class = 'color';
-                            flag = data.flag;
+                            flag = data.Flag;
                             text = '';
                             tooltip = '';
                             order = #self.Options+1;
@@ -2538,7 +2538,7 @@ function library:init()
                     function toggle:AddBind(data)
                         local bind = {
                             class = 'bind';
-                            flag = data.flag;
+                            flag = data.Flag;
                             text = '';
                             tooltip = '';
                             bind = 'none';
@@ -2703,7 +2703,7 @@ function library:init()
                     function toggle:AddSlider(data)
                         local slider = {
                             class = 'slider';
-                            flag = data.flag;
+                            flag = data.Flag;
                             suffix = '';
                             tooltip = '';
                             order = #self.Options+1;
@@ -2889,7 +2889,7 @@ function library:init()
                     function toggle:AddList(data)
                         local list = {
                             class = 'list';
-                            flag = data.flag;
+                            flag = data.Flag;
                             text = '';
                             selected = '';
                             tooltip = '';
@@ -3085,7 +3085,7 @@ function library:init()
                 function section:AddSlider(data)
                     local slider = {
                         class = 'slider';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         tooltip = '';
                         suffix = '';
@@ -3336,7 +3336,7 @@ function library:init()
                 function section:AddButton(data)
                     local button = {
                         class = 'button';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         suffix = '';
                         tooltip = '';
@@ -3472,7 +3472,7 @@ function library:init()
                     function button:AddButton(data)
                         local button = {
                             class = 'button';
-                            flag = data.flag;
+                            flag = data.Flag;
                             text = '';
                             suffix = '';
                             tooltip = '';
@@ -3645,7 +3645,7 @@ function library:init()
                 function section:AddSeparator(data)
                     local separator = {
                         class = 'separator';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         order = #self.Options+1;
                         enabled = true;
@@ -3742,7 +3742,7 @@ function library:init()
                 function section:AddColor(data)
                     local color = {
                         class = 'color';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
@@ -3903,7 +3903,7 @@ function library:init()
                 function section:AddBox(data)
                     local box = {
                         class = 'box';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         input = '';
                         order = #self.Options+1;
@@ -4098,7 +4098,7 @@ function library:init()
                 function section:AddBind(data)
                     local bind = {
                         class = 'bind';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         tooltip = '';
                         bind = 'none';
@@ -4281,7 +4281,7 @@ function library:init()
                 function section:AddList(data)
                     local list = {
                         class = 'list';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         selected = '';
                         tooltip = '';
@@ -4484,7 +4484,7 @@ function library:init()
                 function section:AddText(data)
                     local text = {
                         class = 'text';
-                        flag = data.flag;
+                        flag = data.Flag;
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
@@ -4500,8 +4500,8 @@ function library:init()
                         end
                     end
 
-                    if data.flag then
-                        library.Options[data.flag] = text;
+                    if data.Flag then
+                        library.Options[data.Flag] = text;
                     end
 
                     table.insert(self.Options, text)
