@@ -2252,7 +2252,7 @@ function library:init()
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
-                        state = false;
+                        state = data.Default;
                         risky = false;
                         callback = function() end;
                         enabled = true;
