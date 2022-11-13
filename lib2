@@ -2716,7 +2716,7 @@ function library:init()
                             dragging = false;
                             focused = false;
                             objects = {};
-                            text = data.text or "slider";
+                            text = data.Text or "slider";
                         };
     
                         local blacklist = {'objects', 'dragging'};
@@ -2900,7 +2900,7 @@ function library:init()
                             open = false;
                             values = {};
                             objects = {};
-                            text = data.text or "list";
+                            text = data.Text or "list";
                         }
     
                         table.insert(self.Options, list);
