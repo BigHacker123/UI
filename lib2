@@ -2541,7 +2541,7 @@ function library:init()
                             flag = data.Flag;
                             text = '';
                             tooltip = '';
-                            bind = 'none';
+                            bind = data.Default;
                             mode = 'toggle';
                             order = #self.Options+1;
                             callback = function() end;
