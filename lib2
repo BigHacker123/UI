@@ -1,4 +1,4 @@
--- // Load
+--//Load
 local startupArgs = ({...})[1] or {}
 
 if getgenv().library ~= nil then
@@ -71,7 +71,7 @@ local library = {
 
 library.themes = {
     {
-        name = 'Default',
+        name = 'default',
         theme = {
             ['Accent']                    = fromrgb(255,137,2);
             ['Background']                = fromrgb(18,18,18);
@@ -1892,7 +1892,7 @@ function library:init()
 
         ---- Create Dropdown ----
         do
-            -- Default Objects
+            -- default Objects
             do
                 local objs = window.dropdown.objects;
                 local z = library.zindexOrder.dropdown;
@@ -2248,11 +2248,11 @@ function library:init()
                 function section:AddToggle(data)
                     local toggle = {
                         class = 'toggle';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
-                        state = data.Default;
+                        state = data.default;
                         risky = false;
                         callback = function() end;
                         enabled = true;
@@ -2396,7 +2396,7 @@ function library:init()
                     function toggle:AddColor(data)
                         local color = {
                             class = 'color';
-                            flag = data.Flag;
+                            flag = data.flag;
                             text = '';
                             tooltip = '';
                             order = #self.Options+1;
@@ -2538,10 +2538,10 @@ function library:init()
                     function toggle:AddBind(data)
                         local bind = {
                             class = 'bind';
-                            flag = data.Flag;
+                            flag = data.flag;
                             text = '';
                             tooltip = '';
-                            bind = data.Default;
+                            bind = data.default;
                             mode = 'toggle';
                             order = #self.Options+1;
                             callback = function() end;
@@ -2703,7 +2703,7 @@ function library:init()
                     function toggle:AddSlider(data)
                         local slider = {
                             class = 'slider';
-                            flag = data.Flag;
+                            flag = data.flag;
                             suffix = '';
                             tooltip = '';
                             order = #self.Options+1;
@@ -2889,7 +2889,7 @@ function library:init()
                     function toggle:AddList(data)
                         local list = {
                             class = 'list';
-                            flag = data.Flag;
+                            flag = data.flag;
                             text = '';
                             selected = '';
                             tooltip = '';
@@ -3085,7 +3085,7 @@ function library:init()
                 function section:AddSlider(data)
                     local slider = {
                         class = 'slider';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         tooltip = '';
                         suffix = '';
@@ -3336,7 +3336,7 @@ function library:init()
                 function section:AddButton(data)
                     local button = {
                         class = 'button';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         suffix = '';
                         tooltip = '';
@@ -3472,7 +3472,7 @@ function library:init()
                     function button:AddButton(data)
                         local button = {
                             class = 'button';
-                            flag = data.Flag;
+                            flag = data.flag;
                             text = '';
                             suffix = '';
                             tooltip = '';
@@ -3645,7 +3645,7 @@ function library:init()
                 function section:AddSeparator(data)
                     local separator = {
                         class = 'separator';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         order = #self.Options+1;
                         enabled = true;
@@ -3742,7 +3742,7 @@ function library:init()
                 function section:AddColor(data)
                     local color = {
                         class = 'color';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
@@ -3903,7 +3903,7 @@ function library:init()
                 function section:AddBox(data)
                     local box = {
                         class = 'box';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         input = '';
                         order = #self.Options+1;
@@ -4098,7 +4098,7 @@ function library:init()
                 function section:AddBind(data)
                     local bind = {
                         class = 'bind';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         tooltip = '';
                         bind = 'none';
@@ -4281,7 +4281,7 @@ function library:init()
                 function section:AddList(data)
                     local list = {
                         class = 'list';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         selected = '';
                         tooltip = '';
@@ -4484,7 +4484,7 @@ function library:init()
                 function section:AddText(data)
                     local text = {
                         class = 'text';
-                        flag = data.Flag;
+                        flag = data.flag;
                         text = '';
                         tooltip = '';
                         order = #self.Options+1;
@@ -4500,8 +4500,8 @@ function library:init()
                         end
                     end
 
-                    if data.Flag then
-                        library.Options[data.Flag] = text;
+                    if data.flag then
+                        library.Options[data.flag] = text;
                     end
 
                     table.insert(self.Options, text)
@@ -4874,7 +4874,7 @@ function library:CreateSettingsTab(menu)
                     end;
                 end;
                 setByPreset = false
-            end}):Select("Default");
+            end}):Select("default");
         
             for i, v in pairs(library.theme) do
                 theme_section:AddColor({text = i, flag = i, color = library.theme[i], callback = function(c3)
